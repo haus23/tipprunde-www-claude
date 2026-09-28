@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "tipprunde-www",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-09-01",
+  "observability": { "enabled": true },
+  "assets": {
+    // Built by `npm run build:assets` (scripts/build-assets.ts).
+    "directory": "./public",
+    "not_found_handling": "none"
+  },
+  "vars": {
+    "API_BASE": "https://unterbau.runde.tips/api/v1"
+  }
+  // Custom domain, e.g.:
+  // "routes": [{ "pattern": "runde.tips", "custom_domain": true }]
+}
