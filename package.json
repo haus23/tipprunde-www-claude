@@ -1,0 +1,34 @@
+{
+  "name": "tipprunde-www",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Öffentlicher Web-Client der Fußball-Tipprunde runde.tips",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "build:assets": "node scripts/build-assets.ts",
+    "build": "npm run build:assets && wrangler deploy --dry-run --outdir dist",
+    "dev": "npm run build:assets && wrangler dev",
+    "dev:mock": "npm run build:assets && wrangler dev --var API_BASE:http://127.0.0.1:8788/api/v1",
+    "mock-api": "node scripts/mock-api.ts",
+    "deploy": "npm run build:assets && wrangler deploy",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p client",
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "check": "npm run lint && npm run typecheck && npm test",
+    "cf-typegen": "wrangler types",
+    "pretypecheck": "npm run build:assets",
+    "pretest": "npm run build:assets",
+    "verify:live": "node scripts/verify-live.ts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.14",
+    "@cloudflare/workers-types": "^5.20260928.1",
+    "@types/node": "^26.6.3",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.143.0"
+  }
+}

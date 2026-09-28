@@ -1,0 +1,8 @@
+node_modules/
+dist/
+public/
+src/generated/
+.wrangler/
+.dev.vars
+test-results/
+*.log
