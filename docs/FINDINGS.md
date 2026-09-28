@@ -10,7 +10,9 @@ Quellen: OpenAPI- und Handler-Code des Unterbaus sowie die WWW-App im Repository
 > Valibot-Schemas in `packages/model`). Reale Antworten sind noch nicht geprüft –
 > siehe [VERIFICATION.md](VERIFICATION.md).
 
-## Entscheidungen mit sichtbarer Wirkung (bitte bestätigen)
+## Entscheidungen mit sichtbarer Wirkung
+
+Punkte 1 und 2 wurden am 28.09.2026 vom Auftraggeber bestätigt.
 
 1. **Zusatzpunkte in der Abschlusstabelle.** Legacy zeigt bei abgeschlossenen
    Turnieren die Spalte „Zusatzpunkte“ immer, auch wenn
